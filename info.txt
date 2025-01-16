@@ -1,0 +1,3 @@
+https://gist.github.com/jrosco/d286ef7c620899341cb0#file-wx_multi_tab-py-L24
+https://wiki.wxpython.org/How%20to%20create%20a%20splitter%20window%20%28Phoenix%29
+https://wiki.wxpython.org/UsingSizers

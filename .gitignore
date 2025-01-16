@@ -1,0 +1,6 @@
+*.swp
+*.xlsx
+__pycache__
+warehouse/warehouse_db.sqlite
+warehouse/init_db_prod
+warehouse/scans

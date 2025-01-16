@@ -1,0 +1,231 @@
+
+digraph structs {
+
+
+rankdir="LR"
+
+
+node [shape=none]
+
+equipment [label=<
+            <TABLE BORDER="0" CELLSPACING="0" CELLBORDER="1">
+                <TR>
+                    <TD COLSPAN="2"><B>equipment</B></TD>
+                </TR>
+            
+                <TR>
+                    <TD PORT="id_to">🔑</TD>
+                    <TD PORT="id_from">id</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="subaccount_to">&nbsp;</TD>
+                    <TD PORT="subaccount_from">subaccount</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="name_to">&nbsp;</TD>
+                    <TD PORT="name_from">name</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="year_to">&nbsp;</TD>
+                    <TD PORT="year_from">year</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="measurement_unit_to">&nbsp;</TD>
+                    <TD PORT="measurement_unit_from">measurement_unit</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="price_to">&nbsp;</TD>
+                    <TD PORT="price_from">price</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="amortization_to">&nbsp;</TD>
+                    <TD PORT="amortization_from">amortization</TD>
+                </TR>
+            
+            </TABLE>
+        >];
+        
+ledger [label=<
+            <TABLE BORDER="0" CELLSPACING="0" CELLBORDER="1">
+                <TR>
+                    <TD COLSPAN="2"><B>ledger</B></TD>
+                </TR>
+            
+                <TR>
+                    <TD PORT="id_to">🔑</TD>
+                    <TD PORT="id_from">id</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="timestamp_to">&nbsp;</TD>
+                    <TD PORT="timestamp_from">timestamp</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="document_to">&nbsp;</TD>
+                    <TD PORT="document_from">document</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="status_to">&nbsp;</TD>
+                    <TD PORT="status_from">status</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="person_to">&nbsp;</TD>
+                    <TD PORT="person_from">person</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="scan_to">&nbsp;</TD>
+                    <TD PORT="scan_from">scan</TD>
+                </TR>
+            
+            </TABLE>
+        >];
+        
+looses [label=<
+            <TABLE BORDER="0" CELLSPACING="0" CELLBORDER="1">
+                <TR>
+                    <TD COLSPAN="2"><B>looses</B></TD>
+                </TR>
+            
+                <TR>
+                    <TD PORT="id_to">🔑</TD>
+                    <TD PORT="id_from">id</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="ledger_id_to">&nbsp;</TD>
+                    <TD PORT="ledger_id_from">ledger_id</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="unit_id_to">&nbsp;</TD>
+                    <TD PORT="unit_id_from">unit_id</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="equipment_id_to">&nbsp;</TD>
+                    <TD PORT="equipment_id_from">equipment_id</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="quantity_to">&nbsp;</TD>
+                    <TD PORT="quantity_from">quantity</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="serial_number_to">&nbsp;</TD>
+                    <TD PORT="serial_number_from">serial_number</TD>
+                </TR>
+            
+            </TABLE>
+        >];
+        
+operations [label=<
+            <TABLE BORDER="0" CELLSPACING="0" CELLBORDER="1">
+                <TR>
+                    <TD COLSPAN="2"><B>operations</B></TD>
+                </TR>
+            
+                <TR>
+                    <TD PORT="id_to">🔑</TD>
+                    <TD PORT="id_from">id</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="ledger_id_to">&nbsp;</TD>
+                    <TD PORT="ledger_id_from">ledger_id</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="unit_id_to">&nbsp;</TD>
+                    <TD PORT="unit_id_from">unit_id</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="equipment_id_to">&nbsp;</TD>
+                    <TD PORT="equipment_id_from">equipment_id</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="quantity_to">&nbsp;</TD>
+                    <TD PORT="quantity_from">quantity</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="serial_number_to">&nbsp;</TD>
+                    <TD PORT="serial_number_from">serial_number</TD>
+                </TR>
+            
+            </TABLE>
+        >];
+        
+units [label=<
+            <TABLE BORDER="0" CELLSPACING="0" CELLBORDER="1">
+                <TR>
+                    <TD COLSPAN="2"><B>units</B></TD>
+                </TR>
+            
+                <TR>
+                    <TD PORT="id_to">🔑</TD>
+                    <TD PORT="id_from">id</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="short_name_to">&nbsp;</TD>
+                    <TD PORT="short_name_from">short_name</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="name_to">&nbsp;</TD>
+                    <TD PORT="name_from">name</TD>
+                </TR>
+            
+
+                <TR>
+                    <TD PORT="sort_order_to">&nbsp;</TD>
+                    <TD PORT="sort_order_from">sort_order</TD>
+                </TR>
+            
+            </TABLE>
+        >];
+        
+looses:equipment_id_from:e -> equipment:id_to:w
+looses:unit_id_from:e -> units:id_to:w
+looses:ledger_id_from:e -> ledger:id_to:w
+operations:equipment_id_from:e -> equipment:id_to:w
+operations:unit_id_from:e -> units:id_to:w
+operations:ledger_id_from:e -> ledger:id_to:w
+
+}
